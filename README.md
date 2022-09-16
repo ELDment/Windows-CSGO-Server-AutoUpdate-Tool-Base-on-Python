@@ -2,7 +2,7 @@
 
 CSGO Server AutoUpdate Tool
 
-***功能:CSGO服务器端自动更新。***
+***功能：CSGO服务器端自动更新。***
 
 ***使用：将本程序放在Steamcmd.exe的同目录***
 
