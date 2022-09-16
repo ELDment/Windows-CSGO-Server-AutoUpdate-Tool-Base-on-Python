@@ -6,7 +6,7 @@ CSGO Server AutoUpdate Tool
 
 ***使用：将本程序放在Steamcmd.exe的同目录***
 
-***感谢Minio提供的指导以及茶糜（Tea社服主提供的服务器）！***
+***感谢Minio提供的指导以及茶糜（Tea社服主）提供的服务器！***
 
 本程序可以多开（把程序复制到多个Steamcmd.exe的目录中即可！）
 
