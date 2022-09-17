@@ -17,17 +17,18 @@ while flag == 0:
     else:
         print("[AU] 版本未过时...持续探测中 [" + time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())) + "]") #世界级Debug
         #flag = 1 #世界级Debug
-    time.sleep(300) #防止CPU累坏了，给他休息10秒 XDD
+        time.sleep(300) #防止CPU累坏了，给他休息10秒 XDD
 ###################################################################
 #############以上代码是一个循环，版本过时后会执行以下代码#############
 ###################################################################
+time.sleep(10)
 #print("出来了！！！") #世界级Debug
 os.system('cls') #设置黑底亮白色
 time.sleep(1) #每天一个好习惯：让代码歇一会 XDD
 print("开发 & 调试: ELDment")
 print("技术援助 & 赞助: Minio & Tea\n")
 time.sleep(1) #每天一个好习惯：让代码歇一会 XDD
-os.system('taskkill /f /t /im srcds.exe')
+os.system('taskkill /f /t /im srcds.exe>nul')
 print("已强制结束Srcds进程。 [" + time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())) + "]")
 time.sleep(1) #每天一个好习惯：让代码歇一会 XDD
 os.system('echo ' + download + '>AutoUpdateTool.bat') #强制写出bat
@@ -46,9 +47,9 @@ while res.poll() is None: #进程是否终止
 #############以上代码是一个循环，进程终止后会执行以下代码#############
 ###################################################################
 time.sleep(1) #每天一个好习惯：让代码歇一会 XDD
-os.system('cd .\steamapps\common\Counter-Strike Global Offensive Beta - Dedicated Server&&echo ' + start + ' >AutoUpdateServerTool.bat&&ping -n 2 127.0.0.1>nul&&AutoUpdateServerTool.bat') #强制写出Srcds.exe启动bat
+os.system('cd .\steamapps\common\Counter-Strike Global Offensive Beta - Dedicated Server&&echo ' + start + ' >AutoUpdateServerTool.bat&&ping -n 2 127.0.0.1>nul&&start AutoUpdateServerTool.bat') #强制写出Srcds.exe启动bat
 print("已强制写出Srcds启动脚本，并且该脚本已经启动。 [" + time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())) + "]")
 os.system('echo ping -n 10 127.0.0.1>nul&&' + os.path.basename(sys.argv[0]) + ' >AutoUpdateRestart.bat') #强制写重启程序
 print("已强制写出本程序重启启动脚本，并且该脚本已经启动。 [" + time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())) + "]")
-os.system('AutoUpdateRestart.bat') #启动重启程序
+os.system('start AutoUpdateRestart.bat') #启动重启程序
 os._exit(0) #结束自己等待重开
