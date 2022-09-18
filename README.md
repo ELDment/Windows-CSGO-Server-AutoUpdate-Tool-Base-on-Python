@@ -1,6 +1,6 @@
 # CSGO-Server-AutoUpdate-Tool-Base-on-Python
 
-CSGO Server AutoUpdate Tool
+**视频教程：https://reccloud.com/u/pwedte4**
 
 ***功能：CSGO服务器端自动更新。***
 
