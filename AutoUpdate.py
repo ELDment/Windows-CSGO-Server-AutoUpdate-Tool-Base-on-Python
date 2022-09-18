@@ -49,7 +49,9 @@ while res.poll() is None: #进程是否终止
 time.sleep(1) #每天一个好习惯：让代码歇一会 XDD
 os.system('cd .\steamapps\common\Counter-Strike Global Offensive Beta - Dedicated Server&&echo ' + start + ' >AutoUpdateServerTool.bat&&ping -n 2 127.0.0.1>nul&&start AutoUpdateServerTool.bat') #强制写出Srcds.exe启动bat
 print("已强制写出Srcds启动脚本，并且该脚本已经启动。 [" + time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())) + "]")
-os.system('echo ping -n 10 127.0.0.1>nul&&' + os.path.basename(sys.argv[0]) + ' >AutoUpdateRestart.bat') #强制写重启程序
+time.sleep(1) #每天一个好习惯：让代码歇一会 XDD
+os.system('cd %cd%&&echo ping -n 10 127.0.0.1^>nul>AutoUpdateRestart.bat&&echo start ' + os.path.basename(sys.argv[0]) + '>>AutoUpdateRestart.bat') #强制写重启程序
 print("已强制写出本程序重启启动脚本，并且该脚本已经启动。 [" + time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())) + "]")
+time.sleep(1) #每天一个好习惯：让代码歇一会 XDD
 os.system('start AutoUpdateRestart.bat') #启动重启程序
 os._exit(0) #结束自己等待重开
